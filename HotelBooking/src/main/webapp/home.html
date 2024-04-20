@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women-Only Airbnb - Rent a Room</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .room-list {
+            list-style: none;
+            padding: 0;
+        }
+        .room-list li {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .room-list li h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Available Rooms</h1>
+    <ul class="room-list">
+        <li onclick="redirectToBooking('Cozy Apartment in Paris')"> <!-- Replace with actual room data -->
+            <h3>Cozy Apartment in Paris</h3>
+            <p>Charming apartment in the heart of Paris.</p>
+            <p><strong>Price:</strong> $100/night</p>
+        </li>
+        <li onclick="redirectToBooking('Beach House in Malibu')"> <!-- Replace with actual room data -->
+            <h3>Beach House in Malibu</h3>
+            <p>Relaxing beachfront property with stunning views.</p>
+            <p><strong>Price:</strong> $150/night</p>
+        </li>
+        <li onclick="redirectToBooking('Mountain Retreat in Colorado')"> <!-- Replace with actual room data -->
+            <h3>Mountain Retreat in Colorado</h3>
+            <p>Secluded cabin surrounded by nature trails.</p>
+            <p><strong>Price:</strong> $120/night</p>
+        </li>
+    </ul>
+
+    <script>
+        // Function to redirect to booking page with room name parameter
+        function redirectToBooking(roomName) {
+            window.location.href = "rentRoom.jsp?room=" + encodeURIComponent(roomName);
+        }
+    </script>
+</body>
+</html>

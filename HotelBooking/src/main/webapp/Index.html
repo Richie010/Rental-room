@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Rental</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+
+    <style>
+        /* Additional Styles */
+        .box {
+            display: none;
+        }
+    </style>
+    <script>
+        function toggleSection(sectionId, boxId) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                if (section.id === sectionId) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+
+            var boxes = document.querySelectorAll('.box');
+            boxes.forEach(function(box) {
+                if (box.id === boxId) {
+                    box.style.display = 'block';
+                } else {
+                    box.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#">RENTAL</a></div>    
+            <ul>
+                <li><a href="#" onclick="toggleSection('welcome', 'welcome-box')">WELCOME</a></li>
+                <li><a href="#about" onclick="toggleSection('about', 'about-box')">ABOUT US</a></li>
+                <li><a href="#safety" onclick="toggleSection('safety', 'safety-box')">SAFETY</a></li>
+                <li><a href="#contact" onclick="toggleSection('contact', 'contact-box')">CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Welcome to Home Rental</h1>
+        <p>Find your perfect space for living</p>
+        <a href="signup.jsp">Register</a>
+        <a href="Login.jsp">Login</a>
+    </div>
+    <div class="section" id="about" style="display: none;"></div>
+    <div class="box" id="about-box" style="display: none;">
+        <div class="container">
+            <h1>About Us</h1>
+            <div class="about-content">
+                Welcome to [RENTAL], where we specialize in providing comfortable and secure rental accommodations tailored specifically for women. Whether you're a student embarking on a new academic journey, a professional pursuing career opportunities, or someone simply exploring a new city, we recognize the importance of finding a space that feels like home. Our carefully curated selection of rooms and rental properties is designed to offer a safe and welcoming environment where women can thrive.<br><br>
+                <!-- Rest of About Us content -->
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="safety" style="display: none;"></div>
+    <div class="box" id="safety-box" style="display: none;">
+        <div class="container">
+            <h1>Safety</h1>
+            <p>Ensuring the safety and security of our residents is our utmost priority. We conduct rigorous background checks on all property listings and implement stringent security measures to provide a secure living environment. From secure locks to well-lit common areas, we strive to create a safe space where women can feel comfortable and at ease.</p>
+            <!-- Additional safety content can be added here -->
+        </div>
+    </div>
+
+    <div class="section" id="contact" style="display: none;"></div>
+    <div class="box" id="contact-box" style="display: none;">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="contact-details">
+                <h2><i class="fas fa-envelope"></i> Email</h2>
+                <p><i class="fas fa-envelope-open-text"></i> Email: info@yourwebsite.com</p>
+                <h2><i class="fas fa-phone"></i> Phone</h2>
+                <p><i class="fas fa-phone-alt"></i> Phone: +1-123-456-7890</p>
+                <h2><i class="fas fa-map-marker-alt"></i> Address</h2>
+                <p><i class="fas fa-map-marked"></i> Address: 123 Main Street, City, State, ZIP</p>
+                <!-- Additional contact details can be added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="login.html"></script>
+    <script>
+        // JavaScript to toggle visibility of sections and boxes
+        function toggleSection(sectionId, boxId) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                if (section.id === sectionId) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+
+            var boxes = document.querySelectorAll('.box');
+            boxes.forEach(function(box) {
+                if (box.id === boxId) {
+                    box.style.display = 'block';
+                } else {
+                    box.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
